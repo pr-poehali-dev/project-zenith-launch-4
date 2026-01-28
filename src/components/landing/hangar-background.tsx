@@ -25,9 +25,9 @@ export function HangarBackground({ className }: HangarBackgroundProps) {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       const frames = [
-        { x: canvas.width * 0.15, y: canvas.height * 0.2, scale: 0.6, opacity: 0.15 },
-        { x: canvas.width * 0.65, y: canvas.height * 0.5, scale: 0.7, opacity: 0.12 },
-        { x: canvas.width * 0.3, y: canvas.height * 0.65, scale: 0.5, opacity: 0.1 }
+        { x: canvas.width * 0.15, y: canvas.height * 0.3, scale: 1.2, opacity: 0.4 },
+        { x: canvas.width * 0.6, y: canvas.height * 0.6, scale: 1.4, opacity: 0.35 },
+        { x: canvas.width * 0.25, y: canvas.height * 0.75, scale: 1.0, opacity: 0.3 }
       ]
 
       frames.forEach(frame => {
@@ -45,8 +45,8 @@ export function HangarBackground({ className }: HangarBackgroundProps) {
       ctx.save()
       ctx.translate(x, y)
       ctx.scale(scale, scale)
-      ctx.strokeStyle = `rgba(100, 100, 100, ${opacity})`
-      ctx.lineWidth = 1
+      ctx.strokeStyle = `rgba(255, 77, 0, ${opacity})`
+      ctx.lineWidth = 2
 
       const width = 200
       const height = 120
