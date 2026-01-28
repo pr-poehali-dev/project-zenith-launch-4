@@ -21,7 +21,21 @@ export const sections = [
   {
     id: 'testimonials',
     title: 'Реализованные проекты',
-    content: 'Более 150 построенных объектов: складские комплексы, производственные цеха, логистические центры. География работы — вся Россия.'
+    content: 'Более 150 построенных объектов: складские комплексы, производственные цеха, логистические центры. География работы — вся Россия.',
+    gallery: [
+      {
+        url: 'https://cdn.poehali.dev/projects/c87efcba-671c-4d6b-a076-fe0696a1ced1/files/221ff69f-241b-4265-b694-b27eed1f5b65.jpg',
+        title: 'Складской комплекс'
+      },
+      {
+        url: 'https://cdn.poehali.dev/projects/c87efcba-671c-4d6b-a076-fe0696a1ced1/files/5adb694a-6a5f-45a9-9e12-f7c5b278edd6.jpg',
+        title: 'Производственный цех'
+      },
+      {
+        url: 'https://cdn.poehali.dev/projects/c87efcba-671c-4d6b-a076-fe0696a1ced1/files/3aabe082-6e3a-4101-8850-76dc25f78dd3.jpg',
+        title: 'Логистический центр'
+      }
+    ]
   },
   {
     id: 'join',

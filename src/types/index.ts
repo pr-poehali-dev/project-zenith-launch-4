@@ -7,6 +7,10 @@ export interface Section {
   content?: string
   showButton?: boolean
   buttonText?: string
+  gallery?: Array<{
+    url: string
+    title: string
+  }>
 }
 
 export interface SectionProps extends Section {
