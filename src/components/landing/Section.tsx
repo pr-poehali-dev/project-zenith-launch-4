@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Icon from "@/components/ui/icon"
 import ContactDialog from "./ContactDialog"
 import type { SectionProps } from "@/types"
 
-export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, gallery }: SectionProps) {
+export default function Section({ id, title, subtitle, content, isActive, showButton, buttonText, gallery, steps }: SectionProps) {
   const [dialogOpen, setDialogOpen] = useState(false)
   return (
     <section id={id} className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
@@ -35,6 +36,35 @@ export default function Section({ id, title, subtitle, content, isActive, showBu
         >
           {content}
         </motion.p>
+      )}
+      {steps && (
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-7xl"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isActive ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              className="relative p-6 rounded-lg border border-neutral-800 bg-black/40 backdrop-blur-sm"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isActive ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF4D00]/10 border border-[#FF4D00]/30 flex items-center justify-center">
+                  <Icon name={step.icon} size={24} className="text-[#FF4D00]" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-neutral-500 text-sm font-mono mb-1">Шаг {index + 1}</div>
+                  <h3 className="text-white font-semibold text-lg mb-2">{step.title}</h3>
+                  <p className="text-neutral-400 text-sm">{step.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       )}
       {gallery && (
         <motion.div

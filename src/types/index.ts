@@ -11,6 +11,11 @@ export interface Section {
     url: string
     title: string
   }>
+  steps?: Array<{
+    icon: string
+    title: string
+    description: string
+  }>
 }
 
 export interface SectionProps extends Section {
