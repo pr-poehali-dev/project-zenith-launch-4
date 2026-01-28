@@ -24,10 +24,9 @@ export const sections = [
     content: 'Полный цикл строительства от идеи до сдачи объекта',
     steps: [
       { icon: 'ClipboardList', title: 'Консультация', description: 'Обсуждение требований и выезд на объект' },
-      { icon: 'Ruler', title: 'Проектирование', description: 'Разработка технического проекта и чертежей' },
-      { icon: 'FileText', title: 'Согласование', description: 'Смета, договор и получение разрешений' },
+      { icon: 'Ruler', title: 'Проектирование', description: 'Разработка проекта и сметы' },
       { icon: 'Factory', title: 'Производство', description: 'Изготовление металлоконструкций' },
-      { icon: 'Truck', title: 'Доставка', description: 'Логистика и разгрузка на объекте' },
+      { icon: 'Truck', title: 'Доставка', description: 'Логистика на объект' },
       { icon: 'Wrench', title: 'Монтаж', description: 'Сборка каркаса и обшивка' },
       { icon: 'ClipboardCheck', title: 'Сдача объекта', description: 'Приёмка работ и документация' }
     ]
